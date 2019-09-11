@@ -3,7 +3,7 @@ body {
 }
 
 .Content-Holder {
-    max-width: 1200px;
+    max-width: 1000px;
     height: 100%;
     padding: 20px;
     margin: auto;
@@ -12,8 +12,7 @@ body {
 }
 
 .mainForm {
-    width: 40%;
-    height: 300px;
+    width: 48%;
     display: inline-block;
     font-weight: bold;
 }
@@ -57,9 +56,12 @@ body {
 }
 
 .tableHolder {
-    width: 55%;
-    min-width: 500px;
-    height: 300px;
+    width: 48%;
+    min-width: 340px;
+    height: 340px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
 }
 
 .emptyTableHolder {
@@ -69,9 +71,13 @@ body {
 .table {
     border-spacing: 0;
     border-collapse: collapse;
+    margin: auto auto;
+    vertical-align: center;
 }
 
 .table td {
-
+    width: 30px;
+    height: 30px;
+    text-align: center;
     border: 1px solid black;
 }

@@ -19,24 +19,6 @@ function doSomething(){
     let tableHolder = document.getElementsByClassName("tableHolder");
     tableHolder[0].classList.remove("emptyTableHolder");
 
-    // let table = document.querySelector("table");
-    //
-    // let row = table.insertRow();
-    // for(let i = 0; i < 10; i++){
-    //
-    //     let cell = row.insertCell();
-    //     let text = document.createTextNode("lul");
-    //     cell.appendChild(text);
-    // }
-    // let row2 = table.insertRow();
-    // for(let i = 0; i < 10; i++){
-    //
-    //     let cell = row2.insertCell();
-    //     let text = document.createTextNode("lul");
-    //     cell.appendChild(text);
-    // }
-    //
-    // console.log(table);
 
     // initializing array
     let c = a * b;
@@ -60,6 +42,8 @@ function doSomething(){
 
             //vertical moving
             if(direction > 0) {
+
+                //moving from top to bottom
                 for(let i = minA; i <= maxA; i++){
                     mas[i][tempB] = numberItself;
                     numberItself++;
@@ -71,6 +55,8 @@ function doSomething(){
                     break;
                 }
             } else {
+
+                //moving from bottom to top
                 for(let i = maxA; i >= minA; i--){
                     mas[i][tempB] = numberItself;
                     numberItself++;
@@ -87,8 +73,9 @@ function doSomething(){
 
         } else {
 
-            //horizontal moving
             if(direction > 0){
+
+                //moving from left to right
                 for(let i = minB; i <= maxB; i++){
                     mas[tempA][i] = numberItself;
                     numberItself++;
@@ -101,6 +88,8 @@ function doSomething(){
                     break;
                 }
             } else {
+
+                //moving from right to left
                 for(let i = maxB; i >= minB; i--){
                     mas[tempA][i] = numberItself;
                     numberItself++;
@@ -114,8 +103,25 @@ function doSomething(){
         }
         counter++;
     }
-    console.log(mas);
 
+    let table = document.querySelector("table");
+
+    // clearing table
+    let child = table.lastElementChild;
+    while (child) {
+        table.removeChild(child);
+        child = table.lastElementChild;
+    }
+
+    // filling table
+    for(let i = 0; i < a; i++){
+        let row = table.insertRow();
+        for(let j = 0; j < b; j++){
+            let cell = row.insertCell();
+            let text = document.createTextNode(mas[i][j]);
+            cell.appendChild(text);
+        }
+    }
 
 }
 
