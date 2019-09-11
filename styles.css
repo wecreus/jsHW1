@@ -7,10 +7,12 @@ body {
     height: 100%;
     padding: 20px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .mainForm {
-    width: 350px;
+    width: 40%;
     height: 300px;
     display: inline-block;
     font-weight: bold;
@@ -52,4 +54,24 @@ body {
     background-position: 400px;
     transition-property: border, color, background;
     transition-duration: 500ms;
+}
+
+.tableHolder {
+    width: 55%;
+    min-width: 500px;
+    height: 300px;
+}
+
+.emptyTableHolder {
+    border: 5px dashed #adadad;
+}
+
+.table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table td {
+
+    border: 1px solid black;
 }

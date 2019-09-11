@@ -15,8 +15,107 @@ function evaluateNumbers() {
 
 
 function doSomething(){
-    console.log("a = " + a);
-    console.log("b = " + b);
-    console.log(typeof a);
-    console.log(typeof b);
+    // removing outline of table placeholder
+    let tableHolder = document.getElementsByClassName("tableHolder");
+    tableHolder[0].classList.remove("emptyTableHolder");
+
+    // let table = document.querySelector("table");
+    //
+    // let row = table.insertRow();
+    // for(let i = 0; i < 10; i++){
+    //
+    //     let cell = row.insertCell();
+    //     let text = document.createTextNode("lul");
+    //     cell.appendChild(text);
+    // }
+    // let row2 = table.insertRow();
+    // for(let i = 0; i < 10; i++){
+    //
+    //     let cell = row2.insertCell();
+    //     let text = document.createTextNode("lul");
+    //     cell.appendChild(text);
+    // }
+    //
+    // console.log(table);
+
+    // initializing array
+    let c = a * b;
+    let mas = new Array(a);
+    for (let i = 0; i < mas.length; i++) {
+        mas[i] = new Array(b);
+    }
+
+    // filling array
+    let tempA = 0;
+    let tempB = 0;
+    let maxA = a - 1;
+    let maxB = b - 1;
+    let minA = 0;
+    let minB = 0;
+    let counter = 1;// counter switches vert and horz way of filling the array
+    let direction = 1; // when direction is -1 then array will fill backwards (from right to left or from bottom to top)
+    let numberItself = 1;
+    while(true){
+        if(counter%2 === 0){
+
+            //vertical moving
+            if(direction > 0) {
+                for(let i = minA; i <= maxA; i++){
+                    mas[i][tempB] = numberItself;
+                    numberItself++;
+                }
+                tempA = maxA;
+                maxA--;
+
+                if(numberItself > c){
+                    break;
+                }
+            } else {
+                for(let i = maxA; i >= minA; i--){
+                    mas[i][tempB] = numberItself;
+                    numberItself++;
+                }
+                minB++;
+                tempA = minA;
+
+                if(numberItself > c){
+                    break;
+                }
+            }
+            direction *= -1;
+
+
+        } else {
+
+            //horizontal moving
+            if(direction > 0){
+                for(let i = minB; i <= maxB; i++){
+                    mas[tempA][i] = numberItself;
+                    numberItself++;
+                }
+                minA++;
+                tempB = maxB;
+                maxB--;
+
+                if(numberItself > c){
+                    break;
+                }
+            } else {
+                for(let i = maxB; i >= minB; i--){
+                    mas[tempA][i] = numberItself;
+                    numberItself++;
+                }
+                tempB = minB;
+
+                if(numberItself > c){
+                    break;
+                }
+            }
+        }
+        counter++;
+    }
+    console.log(mas);
+
+
 }
+
