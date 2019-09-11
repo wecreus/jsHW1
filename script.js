@@ -114,12 +114,22 @@ function doSomething(){
     }
 
     // filling table
+
+    let checkboxHolder = document.getElementById("checkbox");
+
     for(let i = 0; i < a; i++){
         let row = table.insertRow();
         for(let j = 0; j < b; j++){
             let cell = row.insertCell();
             let text = document.createTextNode(mas[i][j]);
             cell.appendChild(text);
+
+            if(checkboxHolder.checked){
+                let percent = 50/c;
+                percent = mas[i][j] * percent * 2.5;
+                percent = 250 - percent;
+                cell.style.backgroundColor = `rgb(${percent}, ${percent}, ${percent})`;
+            }
         }
     }
 

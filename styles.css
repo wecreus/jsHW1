@@ -9,6 +9,7 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
+
 }
 
 .mainForm {
@@ -35,7 +36,12 @@ body {
     width: 40px;
 }
 
+.checkbox {
+    float: right;
+}
+
 .form-submit {
+    font-size: 105%;
     font-weight: bold;
     float: right;
     padding: 6px 25px;
@@ -62,6 +68,7 @@ body {
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+
 }
 
 .emptyTableHolder {
@@ -80,4 +87,5 @@ body {
     height: 30px;
     text-align: center;
     border: 1px solid black;
+    background-clip: padding-box;
 }
