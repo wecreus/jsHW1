@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'pt_sans';
+    src: url('fonts/ptsans-webfont.woff2') format('woff2'),
+    url('fonts/ptsans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'pt_sans_caption';
+    src: url('fonts/ptsanscaption-webfont.woff2') format('woff2'),
+    url('fonts/ptsanscaption-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#form1 {
+    font-family: sans-serif;
+    height: 500px;
+    width: 1200px;
+    border-left: 3px solid #144577;
+    padding: 20px 15px;
+}
+
+/* names of fields */
+#form1 .field-group-name {
+    font-size: 110%;
+    font-weight: 600;
+    display: inline-block;
+    width: 500px;
+    margin-bottom: 5px;
+}
+
+#form1 #field1 {
+    display: inline-block;
+    width: 500px;
+}
+
+#form1 #field2 {
+    display: inline-block;
+    width: 487px;
+    vertical-align: top;
+    height: 497px;
+}
+
+/* arranging all the names */
+#form1 .group-names {
+    display: inline-block;
+    width: 190px;
+
+}
+
+#form1 .group-names label {
+    display: block;
+    padding-top: 15px;
+    padding-right: 0;
+    margin-right: 0;
+    width: 160px;
+}
+
+#form1 .group-values {
+    display: inline-block;
+    width: 290px;
+    vertical-align: top;
+    margin-top: 3px;
+}
+
+/* arranging all the values */
+#form1 .group-value-row, .group-value-radio{
+    display: block;
+    padding-top: 11px;
+}
+
+#form1 .group-value-row input, select {
+    display: inline-block;
+    width: 262px;
+    height: 16px;
+}
+
+#form1 .group-value-row select {
+    width: 266px;
+    height: 22px;
+}
+
+#form1 .group-value-radio input {
+    margin-left: 0;
+}
+
+#form1 #index {
+    width: 16%;
+}
+
+#form1 #city {
+    width: 71%;
+    margin-left: 5px;
+}
+
+#form1 .group-value-row #phoneNumber {
+    width: 58px;
+}
+
+#form1 .group-value-row #phone {
+    width: 58px;
+}
+
+#form1 .group-value-row #phoneNumberMiddle {
+    width: 74px;
+    margin-left: 5px;
+}
+
+#form1 .group-value-row #phoneMiddle {
+    width: 74px;
+    margin-left: 5px;
+}
+
+#form1 .group-value-row #phoneNumberEnd {
+    width: 116px;
+    margin-left: 5px;
+}
+
+#form1 .group-value-row #phoneEnd {
+    width: 116px;
+    margin-left: 5px;
+}
+
+#form1 .divQuestion {
+    margin-top: 17px;
+    margin-bottom: 16px;
+}
+
+
+/* checkmarks in form1 */
+#form1 .group-values img {
+    display: inline-block;
+    padding-left: 5px;
+    filter: grayscale(100%) opacity(30%);
+}
+
+#form1 .group-values .normalCheckMark {
+    filter: grayscale(0%) opacity(100%);
+}
+
+/* div representing password strength */
+#form1 #divBorder {
+    width: 264px;
+    height: 5px;
+    border: 1px solid #b3b3b8;
+    border-radius: 0.5em;
+}
+
+#form1 #divGradient {
+    width: 100px;
+    height: 5px;
+    border: 0;
+    border-radius: 0.5em;
+    background-image: linear-gradient(90deg, red, orange);
+}
+
+#form1 .divPassStrength {
+    padding-top: 7px;
+    padding-bottom: 9px;
+}
+
+/* div for agreement */
+#form1 #divAgreement {
+    margin-top: 48px;
+    background-color: #d8d8de;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 50px;
+}
+
+#form1 #agreement {
+    margin-left: -18px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+#form1 #agreementLabel {
+    margin-left: 0;
+    display: inline-block;
+}
+
+/* links */
+#form1 a {
+    color: #007fd5;
+    text-decoration: none;
+}
+
+/* submit button */
+#form1 input[type='submit'] {
+    margin-top: 25px;
+    margin-right: 20px;
+    float: right;
+    padding: 10px;
+    font-size: 120%;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 0.2em;
+    border: 1px solid #54a123;
+    background-image: linear-gradient(#a3c75d, #7c9d4e);
+    cursor: pointer;
+}
+
+
+/**** form 2 ****/
+
+#form2 {
+    font-family: "pt_sans", sans-serif;
+    width: 700px;
+}
+
+#form2 h1 {
+    font-family: "pt_sans_caption", sans-serif;
+    font-weight: normal;
+    color: #282828;
+}
+
+#form2 h4 {
+    color: #707073;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+#form2 hr {
+    border: 0;
+    border-top: 1px solid #e2e2e2;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#form2 .form-heading {
+    font-size: 160%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#form2 .field-group-name {
+    font-weight: 900;
+    font-size: 120%;
+    margin-bottom: 0.5em;
+    margin-top: 1.2em;
+}
+
+#form2 div {
+    display: inline-block;
+}
+
+#form2 input {
+    border: 1px solid #cdcdcd;
+    font-size: 110%;
+}
+
+#form2 #submit {
+    color: #282828;
+    border: 0;
+    background-color: #9b9b9f;
+    margin-top: 1em;
+    padding: 0.7em 1em 0.7em 1em;
+    border-radius: 0.5em;
+}
+
+#form2 .required p::after {
+    content: " * ";
+    color: red;
+}
