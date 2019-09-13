@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
 
+
 }
 
 .mainForm {
@@ -88,4 +89,17 @@ body {
     text-align: center;
     border: 1px solid black;
     background-clip: padding-box;
+}
+
+
+@media only screen and (max-width: 710px) {
+    .Content-Holder {
+        flex-wrap: wrap;
+    }
+    .mainForm {
+        width: 100%;
+    }
+    .tableHolder {
+        width: 100%;
+    }
 }
